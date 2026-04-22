@@ -1,0 +1,79 @@
+body {
+  .app {
+    background-image: url('./pokedex.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: contain;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12vw;
+    position: relative;
+
+    .app__card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      position: fixed;
+      left: 32vw;
+      height: 22vw;
+
+      .app__card__title {
+        font-size: 3vw;
+        font-weight: bold;
+      }
+
+      .app__card__form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1vw;
+        width: 100%;
+        font-size: 1vw;
+
+        .app__card__input {
+          width: 10vw;
+          padding: 0.5vw;
+          border-radius: 5px;
+          border: 0.1vw solid #ccc;
+          font-family: "Pixelify Sans", sans-serif;
+        }
+
+        .app__card__button {
+          font-family: "Pixelify Sans", sans-serif;
+          padding: 0.5vw 1vw;
+          font-size: 1.5vw;
+          border-radius: 5px;
+          border: none;
+          background-color: #ff0000;
+          color: white;
+          cursor: pointer;
+
+          &:hover {
+            background-color: #af0000;
+          }
+        }
+      }
+    }
+
+    @media only screen and (max-width: 1193px) {
+      .app__card {
+        left: 30vw;
+      }
+    }
+
+    .app__results {
+      height: 2vw;
+      position: fixed;
+      font-size: 1.2vw;
+      right: 25.5vw;
+      top: 17vw;
+      img {
+        height: 10vw;
+      }
+    }
+  }
+}
